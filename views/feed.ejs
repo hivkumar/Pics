@@ -1,0 +1,55 @@
+<% include ./partials/header.ejs %>
+
+    <div class="main w-full min-h-screen  text-white ">
+
+        <div class="w-full  bg-gradient-to-r from-purple-300 to-purple-500 pt-20 pb-2 px-5  flex justify-center fixed  gap-x-4 text-xs ">
+            <a href="/nature">Nature</a>
+            <a href="">Wallpapers</a>
+            <a href="">Travel</a>
+            <a href="">Fruits</a>
+            <a href="">Animals</a>
+            <a href="">Stree photography</a>
+            <a href="">Black & White</a>
+            <a href="">Architecture</a>
+            <a href="">Abstract</a>
+            <a href="">Fashion & beauty</a>
+            <a href="">Business & work</a>
+            <a href="">Food & Drink</a>
+            <a href="">Sports</a>
+          </div>
+
+
+
+
+        <div class="  bg-gradient-to- from-purple-300 to-purple-600 px-10 py-28 w-[100%] min-h-screen  rounded-lg shadow-lg shadow-indigo-500/50" >
+        
+
+        <div class=" cards px-2 py-2  flex flex-wrap  gap-x-2 gap-y-4  ">
+
+            <% posts.reverse().forEach(function(elem){ %>
+
+             <a href="/show/posts/<%= elem._id %>" >
+              <div class="card  px-3 py-3 text-center  ">
+
+                <div class="rounded-lg overflow-hidden ">
+                    <img class="lg:h-96 lg:w-[16vw] object-cover " src="/images/uploads/<%= elem.image %>" alt="">
+                </div>
+                <h5 class="text-sm font-semibold text-zinc-800">
+                  <%= elem.title %>
+                </h5>
+               
+
+            </div>
+             </a>
+
+             
+            <% }) %>
+
+
+        </div>
+        </div>
+        </div>
+
+        
+
+        <% include ./partials/footer.ejs %>

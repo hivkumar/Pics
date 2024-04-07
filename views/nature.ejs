@@ -1,0 +1,18 @@
+<% include ./partials/header.ejs %>
+
+<% user.posts.forEach(function(elem){ %>
+
+    <a href="/show/uploads/<%= elem._id %>">
+        <div class="card mt-8">
+            <div class=" w-40 h-44 lg:w-60 lg:h-52 rounded-lg bg-zinc-200 overflow-hidden">
+              <img
+                class="h-full w-full object-cover"
+                src="/images/uploads/<%= elem.image %>" alt="">
+            </div>
+            <h5 class="text-white font-semibold"><%= elem.title %></h5>
+        </div>
+    </a>
+   
+<% }) %>
+
+<% include ./partials/footer.ejs %>

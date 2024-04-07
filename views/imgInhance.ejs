@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/inhance.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="w-full px-7 py-3 z-50 rounded-lg bg-gradient-to-r from-purple-300 to-purple-500 flex justify-between  shadow-lg shadow-grey  ">
+        <div class="flex gap-3 items-center">
+          <img class="h-10 w-10 rounded-full" src="https://i.pinimg.com/736x/1e/b0/fa/1eb0fab3ca3ebb7e088fe38587dbb500.jpg" alt="">
+        <h3 class="text-2xl font-semibold ">PicSphere
+        </h3>
+        </div>
+        <div class="flex gap-10 items-center">
+          <!-- <a class=" text-zinc-800 font-semibold hover:border-b-2" href="/profile">Profile</a> -->
+          <a class="text-zinc-800 font-semibold hover:border-b-2" href="/feed">Home</a>
+          <a class="text-zinc-800 font-semibold hover:border-b-2" href="/add">Create</a>
+          <a class="text-zinc-800 font-semibold hover:border-b-2" href="/inhanceImg">Enhance</a>
+          <!-- <a class="text-zinc-100 font-semibold hover:border-b-2" href="/show/posts">Your Pins</a> -->
+          <a class="px-8 text-white py-1 rounded-full  bg-gradient-to-r from-slate-900 to-slate-700 hover:bg-gradient-to-l from-slate-900 to-slate-700 shadow-lg shadow-grey font-semibold " href="/profile">Profile</a>
+        </div>
+      </div>
+
+
+    <div class="container disable bg-gradient-to-r from-purple-300 to-purple-500">
+        <h2>Easy Image Editor</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <div class="options">
+                        <button id="brightness" class="active">Brightness</button>
+                        <button id="saturation">Saturation</button>
+                        <button id="inversion">Inversion</button>
+                        <button id="grayscale">Grayscale</button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brighteness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Rotate & Flip</label>
+                    <div class="options">
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i> > </button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i> < </button>
+                        <button id="horizontal"><i class='bx bx-reflect-vertical'></i> < > </button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal' ></i> ^ </button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img src="https://lh3.google.com/u/0/d/1FDsVIGZyI4z1KxD9J0l_JZ0h2pP9kdAi=w1920-h892-iv1" alt="preview-img">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Reset Filters</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img">Choose Image</button>
+                <button class="save-img">Save Image</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javascripts/inhance.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<% include ./partials/header.ejs %>
+
+<div
+  class="addbox w-full min-h-screen rounded-lg  bg-gradient-to-r from-purple-400 to-purple-800 text-white py-20 "
+>
+  <div
+    class=" flex flex-col items-center  bg-gradient-to-r from-violet-300 to-violet-500 px-5 py-5 w-[60%] mx-auto rounded-lg shadow-lg shadow-indigo-500/50"
+  >
+  <h3 class="text-xl font-semibold   mb-10 ">Add New Post</h3>
+  
+  
+  <form class="flex flex-col mb-10 " action="/createpost" method="post" enctype="multipart/form-data">
+    <input class="block px-3 py-2 rounded-lg mt-4  border-zinc-300 bg-gradient-to-r from-violet-500 to-violet-500 "  type="file" name="postimage">
+
+    <input class="block px-3 py-2 border-2 rounded-lg mt-4 border-zinc-300 text-white bg-gradient-to-r from-violet-500 to-violet-500"  type="text" placeholder="title " name="title">
+    <!-- <textarea class="block h-60 px-3 py-2 border-2 rounded-lg mt-2 border-zinc-300 text-white bg-gradient-to-r from-violet-500 to-violet-500 " placeholder="description" name="description"></textarea> -->
+
+    <input class="block px-10 mt-5 py-2 rounded-lg text-xs border-2 border-zinc-300 bg-gradient-to-r from-violet-500 to-purple-900 hover:bg-gradient-to-l shadow-lg shadow-grey font-semibold"  type="submit" value="Create">
+  </form>
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>

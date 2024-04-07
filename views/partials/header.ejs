@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <% if(nav===true){%>
+
+    <div
+      class="w-full px-3 xl:px-5 py-3 z-50 rounded-lg bg-gradient-to-r from-purple-300 to-purple-500  justify-between fixed shadow-lg shadow-grey items-center "
+    >
+      <div class="w-full flex justify-between">
+        <div class="flex gap-1 xl:gap-x-2 items-center">
+          <img
+            class="h-10 w-10 rounded-full"
+            src="https://i.pinimg.com/736x/1e/b0/fa/1eb0fab3ca3ebb7e088fe38587dbb500.jpg"
+            alt=""
+          />
+          <h3 class="text-xl xl:text-2xl font-bold text-black">PicSphere</h3>
+        </div>
+        <div class="flex gap-2 xl:gap-5 items-center">
+          <!-- <a class=" text-zinc-800 font-semibold hover:border-b-2" href="/profile">Profile</a> -->
+          <a
+            class="text-white font-semibold hover:border-b-2 text-xs"
+            href="/feed"
+            >Home🏡</a
+          >
+          <a
+            class="text-white font-semibold hover:border-b-2 text-xs"
+            href="/add"
+            >Upload⬆️</a
+          >
+          <a
+            class="text-white font-semibold hover:border-b-2 text-xs"
+            href="/inhanceImg"
+            >Enhancer✨</a
+          >
+          <a
+            class="text-white font-semibold hover:border-b-2 text-xs"
+            href="/removeBg"
+            >Remove-BG</a
+          >
+          <!-- <a class="text-zinc-100 font-semibold hover:border-b-2" href="/show/posts">Your Pins</a> -->
+          <a
+            class="px-4 text-white py-1 rounded-full bg-gradient-to-r from-slate-900 to-slate-700 hover:bg-gradient-to-l from-slate-900 to-slate-700 shadow-lg shadow-grey font-semibold"
+            href="/profile"
+            >Profile</a
+          >
+        </div>
+      </div>
+      
+    </div>
+
+    <% } %>
+  </body>
+</html>
